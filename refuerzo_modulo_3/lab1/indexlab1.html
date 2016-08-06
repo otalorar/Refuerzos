@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Refuerzo 3 - Lab1</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="styles14.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/lab1acontroller.js"></script>
+</head>
+
+<body>
+	<h2> Empleados </h2>
+<div ng-app="r3lab1a" ng-controller="lab1aController">
+<form name="empleados" novalidate>
+
+<table border="0">
+   
+
+<tr><td>Enter name:</td><td><input name="firstname" type="text" ng-model="firstName" required>
+   <span style="color:#ff2a25" ng-show="empleados.firstname.$dirty && empleados.firstname.$invalid">
+      <span ng-show="empleados.firstname.$error.required"> Name is required.</span>
+   </span>
+</td></tr>
+
+<tr><td>Id: </td><td><input name="idn" type="number" ng-model="idn" length="11" required>
+<span style="color:#ff2a25" ng-show="empleados.idn.$dirty && empleados.idn.$invalid">
+      <span ng-show="empleados.idn.$error.required">Id is required.</span>
+	  <span ng-show="empleados.idn.$error.number">Invalid id.</span>
+   </span>
+</td></tr>
+
+</td></tr>
+<tr><td>Enter Profession: </td><td><input name="profession"  type="text" ng-model="profession" required>
+   <span style="color:#ff2a25" ng-show="empleados.profession.$dirty && empleados.profession.$invalid">
+      <span ng-show="empleados.profession.$error.required">Profession is required.</span>
+   </span>
+</td></tr>
+
+<tr><td>Salary: </td><td><input name="salary" type="number" ng-model="salary" length="15" required>
+<span style="color:#ff2a25" ng-show="empleados.salary.$dirty && empleados.salary.$invalid">
+      <span ng-show="empleados.salary.$error.required">Salary is required.</span>
+	  <span ng-show="empleados.salary.$error.number">Invalid salary.</span>
+   </span>
+</td></tr>
+
+<tr><td>Phone: </td><td><input name="phone" type="number" ng-model="phone" length="9" required>
+<span style="color:#ff2a25" ng-show="empleados.phone.$dirty && empleados.phone.$invalid">
+      <span ng-show="empleados.phone.$error.required">Phone is required.</span>
+	  <span ng-show="empleados.phone.$error.number">Ivalid Phone.</span>
+   </span>
+</td></tr>
+
+</td></tr>
+<tr><td>Address: </td><td><input name="address" type="text" ng-model="address" length="100" required>
+<span style="color:#ff2a25" ng-show="empleados.address.$dirty && empleados.address.$invalid">
+      <span ng-show="empleados.address.$error.required">Address is required.</span>
+	  </span>
+</td></tr>
+
+<tr><td><button ng-click="reset()">Reset</button></td>
+
+</table>
+
+</form>
+
+<li> NOMBRE {{ firstName | uppercase }} </li>
+
+
+</div>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

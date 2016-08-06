@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="lab1b">
+<head>
+	<title>Refuerzo3 lab 2 </title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/lab1b.js"></script>
+</head>
+
+<body>
+	
+    <div ng-controller="lab1bcontroller">
+        
+        <h1>Filtros y Tipos</h1>
+        <ul>
+        	<h2> Filtros  </h2>
+            <li ng-repeat="filtro in filtros">{{ filtro }} </li>
+            <h3> Tipos  </h3>
+            <li ng-repeat="tipo in tipos">{{ tipo  }}</li>
+        </ul>
+    </div>
+	
+	</body>
+</html>
