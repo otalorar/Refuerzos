@@ -1,0 +1,10 @@
+<ion-view title="PRODUCTOS APM" id="page1">
+    <ion-content padding="true" class="has-header">
+        <button id="pRODUCTOSAPM-button1" style="font-style:italic;" class=" button button-positive  button-block " ng-click="getProductList()">Mostrar productos</button>
+        <ion-list id="pRODUCTOSAPM-list1">
+         	<ion-item id="pRODUCTOSAPM-list-item1" ng-repeat="item in list">{{item.name}}</ion-item>
+            <ion-item id="pRODUCTOSAPM-list-item2">Item 2</ion-item>
+            <ion-item id="pRODUCTOSAPM-list-item3">Item 3</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
